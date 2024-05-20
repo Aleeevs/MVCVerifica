@@ -1,0 +1,22 @@
+﻿@model List<Spettacolo>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(e => e.Id)) {
+                <tr>
+                    <td>@obj.Id</td>
+                    <td>@obj.Name</td>
+                    <td>@obj.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
